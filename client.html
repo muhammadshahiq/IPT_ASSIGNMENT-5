@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stupid Title</title>
+  </head>
+  <body>
+    <a href="/">Go to home</a>
+    <p>Add a company client</p>
+    <form action="/api/insert/client" method="POST">
+      <div>
+        <label for="name">Client Name</label>
+        <input required type="text" name="name" id="name" />
+      </div>
+      <div>
+        <label for="branch">Branch Id</label>
+        <input
+          required
+          type="text"
+          value="2"
+          readonly
+          name="branch"
+          id="branch"
+        />
+      </div>
+     
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+
+ 
+</html>

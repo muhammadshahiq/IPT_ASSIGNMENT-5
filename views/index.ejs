@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+  </head>
+  <body class="body_data">
+    <a style="position: absolute;" href="/">Go to home</a>
+
+    <div class="data employee">
+      <% if (employee) { %>
+      <ol >
+        <h3>Employees (<%= employee.length %>)</h3>
+        <% employee.forEach(function(emp){ %>
+        <li>
+          <p><span class="key">Id: </span><%= emp.emp_id %></p>
+          <p><span class="key">First name: </span> <%= emp.first_name %></p>
+          <p><span class="key">Last name: </span> <%= emp.last_name %></p>
+          <p><span class="key">DOB: </span> <%= emp.birth_day %></p>
+          <p><span class="key">Salary: </span> <%= emp.salary %></p>
+        </li>
+
+        <% }); %>
+      </ol >
+      <% } %>
+    </div>
+    <div class="data branch">
+      <% if (branch) { %>
+      <ol >
+        <h3>Branches (<%= branch.length %>)</h3>       
+
+        <% branch.forEach(function(br){ %>
+        <li>
+          <p><span class="key">Id: </span> <%= br.branch_id %></p>
+          <p><span class="key">Name: </span> <%= br.branch_name %></p>
+          <p><span class="key">Manager Id: </span> <%= br.mgr_id %></p>
+          <p><span class="key">Mngr start date: </span> <%= br.mgr_start_date %></p>
+        </li>
+
+        <% }); %>
+      </ol >
+      <% } %>
+    </div>
+    <div class="data client">
+      <% if (client) { %>
+      <ol >
+        <h3>Clients (<%= client.length %>)</h3>
+        <% client.forEach(function(cl){ %>
+        <li>
+          <p><span class="key">Id: </span> <%= cl.client_id %></p>
+          <p><span class="key">Name: </span> <%= cl.client_name %></p>
+          <p><span class="key">Branch id: </span> <%= cl.branch_id %></p>
+        </li>
+
+        <% }); %>
+      </ol >
+      <% } %>
+    </div>
+  </body>
+</html>
